@@ -13,7 +13,7 @@ public class FinancesControlApplication {
 		SpringApplication.run(FinancesControlApplication.class, args);
 	}
 
-	@GetMapping("/")
+	@GetMapping("/teste")
 	public String index(){
 		return "Hello, world!";
 	}

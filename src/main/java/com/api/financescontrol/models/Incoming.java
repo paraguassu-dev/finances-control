@@ -2,6 +2,7 @@ package com.api.financescontrol.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -17,8 +18,15 @@ public class Incoming implements Serializable {
     @Column(nullable = false)
     private String type;
 
+    @Column(nullable = false)
+    private LocalDateTime registrationDate;
+
     public UUID getId() {
         return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public double getValue() {
@@ -35,5 +43,13 @@ public class Incoming implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public LocalDateTime getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public void setRegistrationDate(LocalDateTime registrationDate) {
+        this.registrationDate = registrationDate;
     }
 }

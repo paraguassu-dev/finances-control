@@ -13,17 +13,21 @@ public class Account implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     @Column(nullable = false)
-    private static double balance;
+    private double balance;
 
     public UUID getId() {
         return id;
     }
 
-    public static double getBalance() {
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public double getBalance() {
         return balance;
     }
 
-    public static void setBalance(double balance) {
-        Account.balance = balance;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }
