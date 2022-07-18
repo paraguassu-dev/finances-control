@@ -1,10 +1,11 @@
 package com.api.financescontrol.dtos;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class IncomingDTO {
 
-    @NotBlank
+    @NotNull
     private double value;
     @NotBlank
     private String type;
